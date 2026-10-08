@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+  --text: #ece9f4;
+  --dim: rgba(236, 233, 244, 0.6);
+  --accent: #f2b880;
+  --card: rgba(11, 9, 18, 0.5);
+  --line: rgba(236, 233, 244, 0.12);
+}
+* { box-sizing: border-box; }
+html { background: #0b0912; }
+body {
+  margin: 0;
+  padding: 48px 16px 64px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1c162d, #0b0912) fixed;
+  color: var(--text);
+  font: 16px/1.6 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
+}
+main { max-width: 640px; margin: 0 auto; }
+nav { margin-bottom: 40px; font-size: 14px; }
+a { color: var(--accent); }
+nav a { text-decoration: none; font-weight: 600; }
+.arc {
+  height: 6px; width: 120px; border-radius: 3px; margin-bottom: 24px;
+  background: linear-gradient(90deg, #e6614f, #99336b, #40195a, #73a6d9, #ebb880);
+}
+h1 { font-size: 36px; line-height: 1.1; margin: 0 0 6px; font-weight: 700; }
+h2 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 36px 0 8px; }
+.eyebrow { color: var(--dim); font-size: 14px; margin: 0 0 24px; }
+.lede { font-size: 19px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 24px;
+  padding: 18px 20px; margin: 20px 0;
+}
+.card p { margin: 0; }
+.pill {
+  display: inline-block; padding: 4px 12px; border-radius: 999px;
+  background: rgba(242, 184, 128, 0.14); color: var(--accent); font-size: 13px; font-weight: 600;
+}
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+.links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.links a {
+  padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 600;
+  background: var(--card); border: 1px solid var(--line);
+}
+footer { margin-top: 48px; color: var(--dim); font-size: 13px; }
