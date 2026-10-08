@@ -17,5 +17,6 @@ npx wrangler deploy   # ship to slooops.com
 
 ## Notes
 
-- `Reunion.pdf` (51 MB) is over Cloudflare's 25 MB per-file asset limit, so the archive links to the copy on slooops.github.io.
+- Cloudflare caps each file at 25 MB. Compress big PDFs first:
+  `gs -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -dColorConversionStrategy=/RGB -dColorImageResolution=220 -dGrayImageResolution=220 -dNOPAUSE -dBATCH -sOutputFile=out.pdf in.pdf`
 - Derived from [slooops.github.io](https://github.com/slooops/slooops.github.io), minus the code-stats chart.
