@@ -10,13 +10,13 @@
 <main>
   <nav><a href="/pebbles/">&larr; Pebbles</a></nav>
   <h1>Privacy Policy</h1>
-  <p class="eyebrow">Effective October 7, 2026 · Pebbles is in beta, and this policy will be updated as the app changes</p>
+  <p class="eyebrow">Effective October 8, 2026 · Pebbles is in beta, and this policy will be updated as the app changes</p>
 
   <div class="card">
     <p><strong>The short version:</strong> Pebbles collects only what it needs to let you send photos,
     videos and messages to friends you've chosen. There are no ads, no analytics or tracking SDKs, and
     we never sell or share your data for advertising. Media is removed from our servers when it
-    expires, but anything a recipient saves stays on their phone.</p>
+    expires or after viewing finishes. Saved copies can remain on both the sender’s and recipient’s phones.</p>
   </div>
 
   <h2>Who we are</h2>
@@ -28,7 +28,8 @@
     <li><strong>Account details:</strong> your email address and password (stored only as a secure
     hash by our authentication provider), plus the username and display name you choose. Your
     username and display name are visible to people who search for you or are your friends.</li>
-    <li><strong>Friendships:</strong> who you've sent friend requests to, who you've accepted, and when.</li>
+    <li><strong>Connections:</strong> friend requests, accepted friendships, and your blocked-user list.</li>
+    <li><strong>Safety reports:</strong> the account and optional message identifiers, reason and description you submit. A copy of message text is included only if you explicitly choose it; photos and videos are not copied into reports.</li>
     <li><strong>Messages and media:</strong> the photos, videos, notes and text messages you send,
     along with who sent them, who received them, and when they were sent, opened and saved.</li>
     <li><strong>Push notification tokens:</strong> if you allow notifications, a device token from
@@ -53,22 +54,31 @@
 
   <h2>How long we keep it</h2>
   <ul>
-    <li><strong>Photos and videos</strong> can be opened once by each recipient. They expire and are
-    deleted from our servers 7 days after they're sent, whether or not they've been opened.</li>
-    <li><strong>Text messages</strong> expire and are deleted from our servers 24 hours after they're sent.</li>
-    <li><strong>Saved pebbles:</strong> when a recipient saves a photo or video, the media itself is
-    kept only in a private vault on their device. Our servers keep a small record that it was saved
-    (who sent it, the note, and timestamps), not the photo or video.</li>
+    <li><strong>Photos and videos:</strong> each recipient can open a pebble for one viewing session,
+    currently limited to two minutes. Media access expires seven days after upload preparation;
+    sends inherit that deadline. Cleanup can remove media earlier after all recipients have finished
+    viewing, saved it, or their viewing windows have ended. Physical deletion runs asynchronously
+    and retries if needed.</li>
+    <li><strong>Text messages:</strong> access expires 24 hours after sending. Scheduled cleanup removes the server records.</li>
+    <li><strong>Saved pebbles:</strong> the sender temporarily keeps a hidden local copy while waiting
+    for the recipient’s decision. If the recipient saves, both participants can retain independent
+    copies in their phones’ private vaults. Otherwise, the sender’s copy is pruned when the app next
+    reconciles the decision or expiry. The server keeps a save receipt (participants, note and timestamps);
+    saving does not keep the media on the server indefinitely.</li>
+    <li><strong>Safety reports:</strong> reports expire after 30 days and are removed by scheduled cleanup.
+    They are accessible only to the Pebbles team for safety review. If a reported account is deleted,
+    its account reference is removed; evidence explicitly submitted by somebody else can remain until
+    report cleanup. Reports you submitted are deleted with your account.</li>
     <li><strong>Account details and friendships</strong> are kept until you delete your account.</li>
     <li><strong>Push tokens</strong> are removed when you sign out, when Apple reports them invalid,
-    or after 90 days without use.</li>
+    or when your account is deleted. Tokens inactive for 90 days are excluded from delivery; the registration record may remain until one of those removal events.</li>
   </ul>
 
   <h2>Copies on devices</h2>
-  <p>Expiry applies to our servers. Once someone receives your pebble, they can save it in the app,
-  screenshot it, or record their screen, and we can't delete those copies. Only send things to
+  <p>Expiry applies to server access. Both participants can retain a saved pebble in the app. A recipient can also
+  screenshot it or record their screen, and we can't delete those copies. Only send things to
   people you trust. Pebbles' private vault is stored with iOS data protection and is excluded from
-  iCloud and device backups, so it's removed when the app is deleted.</p>
+  iCloud and device backups, so it is removed when the app is deleted. You can remove a saved copy from this iPhone using the message’s menu; that does not remove another person’s copy.</p>
   <p>Messages are encrypted in transit (HTTPS) and stored on access-controlled servers. Pebbles does
   not currently offer end-to-end encryption.</p>
 
@@ -82,10 +92,25 @@
   <p>We may disclose information if required by law, or if it's necessary to protect someone's safety.</p>
 
   <h2>Deleting your account</h2>
-  <p>You can delete your account from the Account screen in the app. This permanently removes your
-  profile, friendships, messages, uploaded media, saved-pebble records and push tokens from our
-  servers. Copies already saved on other people's devices are outside our control. If you can't
-  access the app, email us from your account's email address and we'll delete it for you.</p>
+  <p>In current app builds, open Friends, tap the profile icon, and choose <strong>Delete account</strong>.
+  Confirm the consequences and enter your current password. Deletion removes your Auth account,
+  profile, friendships, blocks, hosted messages, owned uploaded media, saved-pebble records and push
+  tokens. The current iPhone’s vault and session are cleared after successful deletion. If cleanup
+  fails, your account may be paused; retry from the same profile screen. Copies already saved on
+  other people’s devices and offline copies on your other devices cannot be remotely erased. If you can't
+  access the app, email us from your account’s email address for help verifying your identity and completing deletion.</p>
+
+  <p>Deletion concerns active app data. Hosting-provider backups and security logs may have separate
+  retention and cannot be promised to disappear at the same instant. Contact us for questions about
+  the provider’s current retention practices. Updating from an older beta may be required to see
+  the new account and safety controls.</p>
+
+  <h2>Blocking and reporting</h2>
+  <p>Open a person’s profile from Friends or a chat to remove a friend, block them or report them.
+  Blocking stops new messages and requests in both directions and hides the conversation; unblocking
+  does not restore the friendship. Alerts already dispatched may still arrive. Existing saved copies
+  are not remotely erased. Long-press an incoming message or tap the flag while viewing a pebble to
+  report it. Jack reviews the private report queue; email us with the report reference for follow-up.</p>
 
   <h2>Your rights</h2>
   <p>Depending on where you live, you may have the right to access, correct, export or delete your

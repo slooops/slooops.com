@@ -19,14 +19,24 @@
   </div>
 
   <h2>Report a problem or abuse</h2>
-  <p>If someone sends you something harmful, harassing or illegal, email
+  <p>In current builds, open a person’s profile from Friends or a chat and tap <strong>Report user</strong>.
+  You can also long-press an incoming message and choose <strong>Report message</strong>, or tap the
+  flag while viewing a photo or video. Choose a reason and optionally describe what happened.
+  Message text is shared for review only if you opt in; media is not copied into reports.</p>
+  <p>Jack reviews reports privately in the beta’s safety queue. For follow-up, email
   <a href="mailto:jacobsloop@gmail.com?subject=Pebbles%20abuse%20report">jacobsloop@gmail.com</a>
-  with the subject "Abuse report", their username, and roughly when it was sent. We review every
-  report and can remove accounts that break the rules.</p>
+  with your report reference. Reports expire after 30 days and are removed by scheduled cleanup.</p>
+
+  <h2>Remove or block someone</h2>
+  <p>Open their profile from Friends or a chat. <strong>Remove friend</strong> stops new sends until
+  you accept a new friend request, while existing history and saved copies remain.
+  <strong>Block user</strong> stops new sends and requests in both directions and hides the conversation.
+  Manage your block list from your own profile; unblocking does not restore the friendship. None of
+  these actions can erase someone else’s saved copy or screenshot.</p>
 
   <h2>I forgot my password</h2>
   <p>On the sign-in screen, tap <strong>Forgot password?</strong> and enter your email. We'll send
-  a reset link. Open it on your iPhone to choose a new password in the app. Check your spam
+  a reset link. Open it on the same iPhone that requested it to choose a new password in the app. Check your spam
   folder if it doesn't arrive within a few minutes.</p>
 
   <h2>I never got my confirmation email</h2>
@@ -38,13 +48,18 @@
   and wait for them to accept.</p>
 
   <h2>Where did my pebble go?</h2>
-  <p>Photo and video pebbles open once and expire from the server after 7 days, opened or not.
-  Text messages expire after 24 hours. To keep one, save it while you're viewing it.</p>
+  <p>Photo and video pebbles have one viewing session per recipient, currently up to two minutes.
+  Server access expires seven days after upload preparation, and cleanup can remove media earlier
+  after all recipients finish. Text expires after 24 hours. To keep a pebble, save it while viewing;
+  this lets both participants retain independent copies on their phones. Server deletion runs asynchronously.</p>
 
   <h2>Delete my account</h2>
-  <p>You can delete your account in the app from your Account screen. That removes your profile,
-  friendships, messages and uploaded media from our servers. If you can't access the app, email us
-  from your account's email address and we'll do it for you.</p>
+  <p>In current builds, open <strong>Friends → profile icon → Delete account</strong>, read the
+  confirmation and enter your current password. This deletes the account and associated hosted app
+  data, plus the vault on this iPhone. Others’ saved copies/screenshots cannot be remotely erased;
+  reports submitted by others follow the safety-retention policy. Keep the app open and retry if
+  cleanup fails. If you cannot sign in, email us from your account’s email address for help. Older
+  beta builds may need updating to see these controls.</p>
 
   <footer><a href="/pebbles/privacy">Privacy Policy</a></footer>
 </main>
