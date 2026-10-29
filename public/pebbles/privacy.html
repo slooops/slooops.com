@@ -10,7 +10,7 @@
 <main>
   <nav><a href="/pebbles/">&larr; Pebbles</a></nav>
   <h1>Privacy Policy</h1>
-  <p class="eyebrow">Effective October 28, 2026 · Pebbles is in beta, and this policy will be updated as the app changes</p>
+  <p class="eyebrow">Effective October 29, 2026 · Pebbles is in beta, and this policy will be updated as the app changes</p>
 
   <div class="card">
     <p><strong>The short version:</strong> Pebbles collects only what it needs to let you send photos,
@@ -32,7 +32,7 @@
     <li><strong>Safety reports:</strong> the account and optional message identifiers, reason and description you submit. A copy of message text is included only if you explicitly choose it; photos and videos are not copied into reports.</li>
     <li><strong>Messages and media:</strong> the photos, videos, notes and text messages you send,
     along with who sent them, who received them, and when they were sent, opened and saved.</li>
-    <li><strong>Encryption setup (new encryption beta):</strong> your public identity key, its fingerprint and an encrypted recovery backup. Your private identity key and recovery code are not sent to us. Non-content encrypted-send identifiers are kept until either associated account is deleted to prevent replay after message expiry.</li>
+    <li><strong>Account encryption setup:</strong> your public identity key, its fingerprint and an encrypted recovery backup. Your private identity key and recovery code are not sent to us. Non-content encrypted-send identifiers are kept until either associated account is deleted to prevent replay after message expiry.</li>
     <li><strong>Push notification tokens:</strong> if you allow notifications, a device token from
     Apple so we can tell you when a friend sends you something.</li>
   </ul>
@@ -64,7 +64,7 @@
     <li><strong>Saved pebbles:</strong> the sender temporarily keeps a hidden local copy while waiting
     for the recipient’s decision. If the recipient saves, both participants can retain independent
     copies in their phones’ private vaults. Otherwise, the sender’s copy is pruned when the app next
-    reconciles the decision or expiry. The server keeps a save receipt (participants and timestamps, plus the note for legacy sends or opaque envelopes for encrypted sends);
+    reconciles the decision or expiry. The server keeps a save receipt (participants and timestamps, plus opaque encrypted envelopes);
     saving does not keep the media on the server indefinitely.</li>
     <li><strong>Safety reports:</strong> reports expire after 30 days and are removed by scheduled cleanup.
     They are accessible only to the Pebbles team for safety review. If a reported account is deleted,
@@ -80,22 +80,23 @@
   screenshot it or record their screen, and we can't delete those copies. Only send things to
   people you trust. Pebbles' private vault is stored with iOS data protection and is excluded from
   iCloud and device backups, so it is removed when the app is deleted. You can remove a saved copy from this iPhone using the message’s menu; that does not remove another person’s copy.</p>
-  <h2>Encryption in the new beta</h2>
-  <p>The new encryption beta offers optional end-to-end encryption for new texts, captions, reply references,
-  photos and videos. Both friends must update, enable encryption in their profiles and compare fingerprints
-  over a trusted channel. Once enabled for an account, new sends require encryption; they pause if the other
-  person has not completed setup. Existing messages are not retroactively encrypted. Older builds without
-  <strong>Encryption &amp; recovery</strong> still use server-readable delivery unless either participant has opted in,
-  in which case those builds cannot send to that person.</p>
-  <p>Encrypted content is encrypted on the sending device and decrypted on the receiving devices. Our service
-  stores ciphertext and delivery metadata, including participants, content type and timestamps. It cannot
-  decrypt that content using the public key or encrypted recovery backup alone. Reporter-selected text is
-  disclosed separately for safety review. HTTPS protects all network traffic, including legacy messages.</p>
+  <h2>End-to-end encryption</h2>
+  <p>All new texts, captions, reply references, photos and videos require end-to-end encryption. Both friends
+  must use the updated app, save their separate recovery codes during account setup, and compare fingerprints
+  over a trusted channel before exchanging messages. Older builds cannot send unencrypted messages or media.
+  Earlier messages are not retroactively encrypted; old delivery formats are no longer available through the app.</p>
+  <p>Content is encrypted by the sender and decrypted by the recipients. Our service stores ciphertext and delivery
+  metadata, including participants, content type and timestamps. It cannot decrypt personal message content using
+  the public key or encrypted recovery backup alone. Reporter-selected text is disclosed separately for safety
+  review. HTTPS also protects network traffic. Account details and delivery metadata are outside end-to-end encryption.</p>
   <p>Your private identity stays in this device's protected Keychain. Save the separate recovery code privately:
   your password cannot replace it, and support cannot recover it. Restoring an identity does not restore lost
   device-only media. A new recovery backup does not revoke an older copied code and backup for the same identity.
   This beta has not had an independent security audit and does not provide forward secrecy if a long-term
-  identity key is later compromised. Account details, delivery metadata and legacy history are outside end-to-end encryption.</p>
+  identity key is later compromised.</p>
+  <p>The dedicated App Review account exchanges generated samples with an automated sender. That sender holds
+  its own endpoint key on the server to create encrypted samples; it does not hold personal users' private keys.
+  Review credentials and recovery material are shared with reviewers. Do not use the review account for personal content.</p>
 
   <h2>Who we share it with</h2>
   <p>We don't sell your personal information or share it for advertising. We use a small number of
