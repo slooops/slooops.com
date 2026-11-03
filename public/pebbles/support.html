@@ -45,16 +45,19 @@
 
   <h2>Why can't I send to someone?</h2>
   <p>You can only send to accepted friends. Search their username in Friends, send a request,
-  and wait for them to accept. All messages require encryption. Both people must update Pebbles,
-  save their recovery codes during account setup, then open each other's profile and choose
-  <strong>Verify security code</strong>. Compare every fingerprint group against the friend's own profile in person
-  or over a trusted channel. Never accept a changed fingerprint without a fresh comparison.</p>
+  and wait for them to accept. Both people should update to version 1.2 and sign in normally.
+  No encryption keys, recovery codes or fingerprint comparison are required. Blocking or removing a friend
+  stops new messages until the connection is restored.</p>
 
-  <h2>Recover encrypted messages on another phone</h2>
-  <p>Sign into the same account. The security setup screen will ask you to enter
-  your privately saved recovery code. Verify friends again on this phone. Resetting your password does not
-  restore your encryption key; support cannot recover a lost code. Expired messages and device-only photos
-  lost with a phone cannot be recovered from the encrypted identity backup. Save the code in your password manager.</p>
+  <h2>Are my messages encrypted on Wi-Fi?</h2>
+  <p>Messages and photo/video transfers use HTTPS/TLS, protecting their contents from passive observation
+  on ordinary Wi-Fi. Pebbles is not end-to-end encrypted: the service processes readable content to deliver it.
+  This does not promise protection from monitoring software or trusted traffic inspection on a work-managed phone.</p>
+
+  <h2>Sign in on another phone</h2>
+  <p>Use your existing account email and password, or the password-reset link if needed. Version 1.2 has no
+  additional encryption setup. Expired messages and saved photos stored only on a lost phone cannot be restored.
+  Older version 1.1 ciphertext may be unavailable without the original device's keys; it is not silently converted.</p>
 
   <h2>Where did my pebble go?</h2>
   <p>Photo and video pebbles have one viewing session per recipient, currently up to two minutes.
