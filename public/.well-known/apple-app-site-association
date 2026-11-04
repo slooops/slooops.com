@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["B928V37KFD.com.slooops.dailydough"],
+        "components": [{ "/": "/daily-dough/oauth*" }]
+      }
+    ]
+  }
+}
