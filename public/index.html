@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jack Sloop • Portfolio</title>
+    <meta
+      name="description"
+      content="Jack Sloop: front-end engineer and designer in San Francisco. iOS apps, interactive web projects, and editorial design."
+    />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -22,165 +26,196 @@
       <p>
         I’m a front-end engineer and designer based in San Francisco. I
         specialize in building beautiful, reusable UI component systems in
-        Angular and React. After dark, I build out a Storybook component
-        library, and during the day I work at Cisco, making big dashboards full
-        of cool data visualizations.
+        Angular and React. During the day I work at Cisco, making big dashboards
+        full of cool data visualizations. After dark, I make iPhone apps and
+        odd little web machines.
       </p>
       <p>
         This site is hand-coded, hosted on Cloudflare, and refreshingly free
         of div soup.
       </p>
+
+      <nav class="profile-links" aria-label="Elsewhere">
+        <a class="btn btn-dark" href="https://apps.apple.com/us/developer/jacob-sloop/id6823783185" target="_blank">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.77c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 6.02c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.05-.52 2.68-1.28z"/></svg>
+          My Apps
+        </a>
+        <a class="btn" href="https://github.com/slooops" target="_blank">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/jack-sloop/" target="_blank">LinkedIn</a>
+        <a class="btn" href="mailto:jacobsloop@gmail.com">Email</a>
+      </nav>
     </section>
-    <section class="callouts-grid">
-      <div class="callout">
-        <h2>Storybook Library</h2>
-        <p>
-          A component library with polished (and some
-          in-progress-not-yet-polished), accessible components—built with
-          Angular standalone, custom SCSS, and a deep love for typography.
-        </p>
-        <p>
-          <a
-            href="https://slooops.github.io/asdf/storybook-static/"
-            target="_blank"
-            >View Storybook →</a
-          >
-        </p>
-      </div>
 
-      <div class="callout">
-        <h2>The Kenny Test</h2>
+    <h2 class="section-label">Featured</h2>
+    <section class="featured-grid">
+      <article class="callout card">
+        <div class="card-head">
+          <img class="app-icon" src="assets/img/subnet-icon.png" alt="" width="56" height="56" />
+          <div>
+            <h2>Subnet</h2>
+            <p class="card-meta">iPhone &amp; iPad · Out now</p>
+          </div>
+        </div>
         <p>
-          An unhinged 103-question quiz app in React, Vite, Supabase, and the
-          Giphy API based on a real list of "red flags" our enemy Kenny made.
-          The friend group all ranked ourselves. Score above 32? Unmarriageable.
-          Below? Super eligible.
+          A real-time node-conquest game, built in SwiftUI. Push load across a
+          hex or circuit-board grid and take the whole subnet before the red
+          daemon does. No ads, no tracking, fully offline.
         </p>
-        <p>
-          <a href="https://silly-sandbox.vercel.app/" target="_blank"
-            >Take the Test →</a
-          >
+        <p class="card-actions">
+          <a class="btn btn-dark" href="https://apps.apple.com/us/app/sub-net/id6823783183" target="_blank">Get It Free on the App Store</a>
+          <a class="btn" href="/subnet/">More</a>
         </p>
-      </div>
+      </article>
 
-      <div class="callout">
-        <h2>Subnet</h2>
-        <p>
-          A real-time node-conquest game for iPhone and iPad, built in SwiftUI.
-          Push load across a hex or circuit-board grid and take the whole subnet
-          before the red daemon does. No ads, no tracking, fully offline. Out
-          now on the App Store.
-        </p>
-        <p>
-          <a href="https://apps.apple.com/us/app/sub-net/id6823783183" target="_blank">Get It Free →</a> ·
-          <a href="/subnet/">More →</a>
-        </p>
-      </div>
-
-      <div class="callout">
-        <h2>Orrery</h2>
+      <article class="callout card">
+        <div class="card-head">
+          <img class="app-icon" src="orrery/favicon.svg" alt="" width="56" height="56" />
+          <div>
+            <h2>Orrery</h2>
+            <p class="card-meta">Web · React &amp; TypeScript</p>
+          </div>
+        </div>
         <p>
           I learned horoscopes are deterministic: a birth date, time, and place
           go in, planet positions and angles come out, and lookup tables turn
           them into sentences. Nothing is random, so you can calculate every
-          horoscope ever. Orrery is that machine with the cover off, built in
-          React and TypeScript on real astronomy.
+          horoscope ever. Orrery is that machine with the cover off, built on
+          real astronomy.
         </p>
-        <p><a href="/orrery/">Open the Machine →</a></p>
-      </div>
-
-      <div class="callout">
-        <h2>Pebbles</h2>
-        <p>
-          A small, private iPhone app for sending everyday photos and videos to
-          friends. No feed, no ads, no phone number. Built in SwiftUI on
-          Supabase.
+        <p class="card-actions">
+          <a class="btn btn-dark" href="/orrery/">Open the Machine</a>
         </p>
-        <p><a href="/pebbles/">In Beta →</a></p>
-      </div>
+      </article>
+    </section>
 
-      <div class="callout">
+    <h2 class="section-label">More Work</h2>
+    <section class="callouts-grid">
+      <article class="callout card">
         <h2>Moonbeam</h2>
+        <p class="card-meta">iPhone &amp; iPad · Coming next</p>
         <p>
           A REM sleep calculator built in Swift, and a frustration with the fact
           that most sleep apps have a subscription fee? I'm literally just
           calculating 1.5 hrs onto my bedtime, and I wanted a nice UI to do it.
           So here we are. Next up on the App Store.
         </p>
-        <p>
-          <a href="/moonbeam/">Coming Soon →</a> ·
-          <a href="https://github.com/slooops/Moonbeam" target="_blank"
-            >View Repo →</a
-          >
+        <p class="card-actions">
+          <a class="btn" href="/moonbeam/">Coming Soon</a>
+          <a class="btn" href="https://github.com/slooops/Moonbeam" target="_blank">Repo</a>
         </p>
-      </div>
+      </article>
 
-      <div class="callout">
+      <article class="callout card">
+        <h2>Pebbles</h2>
+        <p class="card-meta">iPhone · In beta</p>
+        <p>
+          A small, private iPhone app for sending everyday photos and videos to
+          friends. No feed, no ads, no phone number. Built in SwiftUI on
+          Supabase.
+        </p>
+        <p class="card-actions">
+          <a class="btn" href="/pebbles/">In Beta</a>
+        </p>
+      </article>
+
+      <article class="callout card">
         <h2>Daily Dough</h2>
+        <p class="card-meta">iPhone · In testing</p>
         <p>
           A personal finance app that tells you exactly how much you can
           sustainably spend <em>right now</em>. Uses Plaid to turn your income,
           bills, and real bank transactions into a reactive daily allowance.
         </p>
-        <p>
-          <a href="https://github.com/slooops/Daily-Dough" target="_blank"
-            >View Repo →</a
-          >
+        <p class="card-actions">
+          <a class="btn" href="/daily-dough/">More</a>
+          <a class="btn" href="https://github.com/slooops/Daily-Dough" target="_blank">Repo</a>
         </p>
-      </div>
+      </article>
 
-      <div class="callout">
-        <h2>Wordle Clone</h2>
+      <article class="callout card">
+        <h2>Storybook Library</h2>
+        <p class="card-meta">Angular · Design system</p>
         <p>
-          A just-for-fun take on the classic word game, made in 2022 because I,
-          too, needed a JavaScript side quest. Still works! Still fun! Still
-          five letters!
+          A component library with polished (and some
+          in-progress-not-yet-polished), accessible components—built with
+          Angular standalone, custom SCSS, and a deep love for typography.
         </p>
-        <p>
-          <a href="https://wordle.jaxks.co" target="_blank">Play Wordle →</a>
+        <p class="card-actions">
+          <a class="btn" href="https://slooops.github.io/asdf/storybook-static/" target="_blank">View Storybook</a>
         </p>
-      </div>
+      </article>
 
-      <div class="callout">
-        <h2>Design Work</h2>
+      <article class="callout card">
+        <h2><em>Community Magazine</em></h2>
+        <p class="card-meta">Web · Full stack</p>
         <p>
-          My pre-engineering life: branding, layouts, typography, and magazine
-          design. Includes work for student orgs, clients, and queer community
-          groups.
+          A full-stack magazine app for showcasing <em>Community Magazine</em>,
+          a zine about Muni Metro, transit in SF, and beyond.
         </p>
-        <p><a href="https://jaxks.co" target="_blank">Design Archive →</a></p>
-      </div>
+        <p class="card-actions">
+          <a class="btn" href="https://community-zine.vercel.app/" target="_blank">Read It</a>
+        </p>
+      </article>
 
-      <div class="callout">
+      <article class="callout card">
         <h2>Print Archive</h2>
+        <p class="card-meta">Editorial design</p>
         <p>
           Thousands of pages of editorial design from my time at St
           Andrews—spreads, covers, and layouts from <em>The Gay Saint</em> and
           <em>Hearing Aid</em>. All lovingly typeset.
         </p>
-        <p><a href="archive.html">Into Print! →</a></p>
-      </div>
-
-      <div class="callout">
-        <h2><em>Community Magazine</em></h2>
-        <p>
-          A full-stack magazine app for showcasing <em>Community Magazine</em>,
-          a zine about Muni Metro, transit in SF, and beyond.
+        <p class="card-actions">
+          <a class="btn" href="archive.html">Into Print!</a>
         </p>
-        <p>
-          <a href="https://community-zine.vercel.app/" target="_blank"
-            >Read It →</a
-          >
-        </p>
-      </div>
+      </article>
 
-      <div class="callout">
+      <article class="callout card">
+        <h2>Design Work</h2>
+        <p class="card-meta">Branding · Layout</p>
+        <p>
+          My pre-engineering life: branding, layouts, typography, and magazine
+          design. Includes work for student orgs, clients, and queer community
+          groups.
+        </p>
+        <p class="card-actions">
+          <a class="btn" href="https://jaxks.co" target="_blank">Design Archive</a>
+        </p>
+      </article>
+
+      <article class="callout card">
+        <h2>Wordle Clone</h2>
+        <p class="card-meta">Web · JavaScript</p>
+        <p>
+          A just-for-fun take on the classic word game, made in 2022 because I,
+          too, needed a JavaScript side quest. Still works! Still fun! Still
+          five letters!
+        </p>
+        <p class="card-actions">
+          <a class="btn" href="https://wordle.jaxks.co" target="_blank">Play Wordle</a>
+        </p>
+      </article>
+
+      <article class="callout card">
         <h2>Work @ Cisco</h2>
+        <p class="card-meta">Angular · Data viz</p>
         <p>
           Angular dashboards, predictive models, and confidential financial
           data—so no, you can’t see the code.
         </p>
-      </div>
+      </article>
     </section>
+
+    <footer class="site-footer">
+      <span>© 2026 Jack Sloop</span>
+      <span>
+        <a href="https://apps.apple.com/us/developer/jacob-sloop/id6823783185" target="_blank">App Store</a> ·
+        <a href="https://github.com/slooops" target="_blank">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/jack-sloop/" target="_blank">LinkedIn</a>
+      </span>
+    </footer>
   </body>
 </html>

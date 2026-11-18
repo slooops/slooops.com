@@ -78,6 +78,11 @@ a:hover {
 
   .responsive-header .header-text {
     order: 2;
+    flex: 0 0 auto;
+  }
+
+  .responsive-header h1 {
+    margin-top: 0.5rem;
   }
 
   .responsive-header .portrait {
@@ -142,3 +147,145 @@ a:hover {
   font-size: 0.95rem;
 }
 
+
+/* Profile links */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #1a1a1a;
+  background: #fff;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.btn svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.btn-dark {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #3a3a3a;
+  border-color: #3a3a3a;
+  color: #fff;
+}
+
+/* Sections */
+.section-label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 1rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem 1rem;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: #cfcfcf;
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0.75rem 0 0;
+}
+
+.card .card-meta {
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.card .card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  border-radius: 13px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #ececec;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.site-footer a {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1.25rem 1rem;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
+}
